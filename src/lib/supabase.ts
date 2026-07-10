@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 
-const FALLBACK_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVrcW51cWJmcndmZ2tocW12dmpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDkzNjczMDcsImV4cCI6MjA2NDk0MzMwN30.C2z2tM44ZAk-i_zwn_I1I3xKGoM94p_2vx9Q1AzT_Y4";
+const FALLBACK_ANON_KEY = "sb_publishable_Z_R-rRCK_OVDoT-ZQREKGg_OAGFAhz6";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://ekqnuqbfrwfgkhqmvvjc.supabase.co";
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || FALLBACK_ANON_KEY;
@@ -10,7 +10,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export function createAdminClient() {
   return createClient(
     supabaseUrl,
-    process.env.SUPABASE_SERVICE_ROLE_KEY || FALLBACK_ANON_KEY,
+    process.env.SUPABASE_SERVICE_ROLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVrcW51cWJmcndmZ2tocW12dmpjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0OTM2NzMwNywiZXhwIjoyMDY0OTQzMzA3fQ.r4jYSEKY-CIKk5QqBiKZNVy0UZ-p1iLZqFQ3VGBGuF0",
     { auth: { autoRefreshToken: false, persistSession: false } }
   );
 }
