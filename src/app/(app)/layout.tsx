@@ -72,9 +72,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <div className="flex flex-1 flex-col">
         {/* Top bar */}
         <header className="flex h-14 items-center border-b bg-card px-4 md:px-6">
-          <Link href="https://cyberbhutan.com" className="text-xs text-muted-foreground hover:text-foreground">
-            ← Back to Cyber Bhutan
-          </Link>
           <div className="flex-1" />
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <span className="hidden sm:inline">DrukBiz OS v0.1</span>
