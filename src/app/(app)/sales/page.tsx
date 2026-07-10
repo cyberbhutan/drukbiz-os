@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
+import { NewSaleDialog } from "@/components/new-sale-dialog";
 
 export default function SalesPage() {
   const sales = [
@@ -23,7 +22,7 @@ export default function SalesPage() {
           <h1 className="text-2xl font-bold tracking-tight">Sales</h1>
           <p className="text-sm text-muted-foreground">Record and track every sale.</p>
         </div>
-        <Button><Plus className="mr-1 h-4 w-4" /> New Sale</Button>
+        <NewSaleDialog />
       </div>
 
       <div className="grid gap-4 sm:grid-cols-4">

@@ -1,13 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Plus, TrendingDown, TrendingUp } from "lucide-react";
+import { AddExpenseDialog } from "@/components/add-expense-dialog";
+import { TrendingDown, TrendingUp } from "lucide-react";
 
 export default function ExpensesPage() {
   return (
     <div>
       <div className="mb-6 flex items-center justify-between">
         <div><h1 className="text-2xl font-bold tracking-tight">Expenses</h1><p className="text-sm text-muted-foreground">Track all business expenses and costs.</p></div>
-        <Button><Plus className="mr-1 h-4 w-4" /> Add Expense</Button>
+        <AddExpenseDialog />
       </div>
       <div className="grid gap-4 sm:grid-cols-3">
         <Card><CardContent className="p-4"><p className="text-xs text-muted-foreground">Today</p><p className="text-xl font-bold text-red-600">Nu. 12,500</p></CardContent></Card>

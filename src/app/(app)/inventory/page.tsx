@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Plus, AlertTriangle, Search } from "lucide-react";
+import { AddProductDialog } from "@/components/add-product-dialog";
+import { Search, AlertTriangle } from "lucide-react";
 
 export default function InventoryPage() {
   const products = [
@@ -23,7 +23,7 @@ export default function InventoryPage() {
         </div>
         <div className="flex gap-2">
           <Button variant="outline"><Search className="mr-1 h-4 w-4" /> Search</Button>
-          <Button><Plus className="mr-1 h-4 w-4" /> Add Product</Button>
+          <AddProductDialog />
         </div>
       </div>
 

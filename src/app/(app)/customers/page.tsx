@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
+import { AddCustomerDialog } from "@/components/add-customer-dialog";
 
 export default function CustomersPage() {
   const customers = [
@@ -19,7 +18,7 @@ export default function CustomersPage() {
           <h1 className="text-2xl font-bold tracking-tight">Customers</h1>
           <p className="text-sm text-muted-foreground">Track purchase history, credit, and loyalty.</p>
         </div>
-        <Button><Plus className="mr-1 h-4 w-4" /> Add Customer</Button>
+        <AddCustomerDialog />
       </div>
 
       <div className="grid gap-4 sm:grid-cols-4">

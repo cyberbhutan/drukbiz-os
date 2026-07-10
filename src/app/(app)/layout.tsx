@@ -78,6 +78,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <div className="flex-1" />
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <span className="hidden sm:inline">DrukBiz OS v0.1</span>
+            <form action="/api/logout" method="POST">
+              <button type="submit" className="ml-3 text-xs text-muted-foreground hover:text-foreground">Logout</button>
+            </form>
           </div>
         </header>
 
