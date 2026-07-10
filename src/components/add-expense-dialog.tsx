@@ -29,7 +29,7 @@ export function AddExpenseDialog() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
+      <DialogTrigger >
         <Button><Plus className="mr-1 h-4 w-4" /> Add Expense</Button>
       </DialogTrigger>
       <DialogContent>
