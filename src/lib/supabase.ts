@@ -1,13 +1,14 @@
-import { createClient } from "@supabase/supabase-js";
+import { createBrowserClient } from "@supabase/ssr";
 
 const FALLBACK_ANON_KEY = "sb_publishable_Z_R-rRCK_OVDoT-ZQREKGg_OAGFAhz6";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://ekqnuqbfrwfgkhqmvvjc.supabase.co";
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || FALLBACK_ANON_KEY;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = createBrowserClient(supabaseUrl, supabaseAnonKey);
 
 export function createAdminClient() {
+  const { createClient } = require("@supabase/supabase-js");
   return createClient(
     supabaseUrl,
     process.env.SUPABASE_SERVICE_ROLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVrcW51cWJmcndmZ2tocW12dmpjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0OTM2NzMwNywiZXhwIjoyMDY0OTQzMzA3fQ.r4jYSEKY-CIKk5QqBiKZNVy0UZ-p1iLZqFQ3VGBGuF0",
