@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { AddProductDialog } from "@/components/add-product-dialog";
 import { Search, AlertTriangle } from "lucide-react";
 
